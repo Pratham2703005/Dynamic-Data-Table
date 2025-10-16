@@ -1,8 +1,10 @@
 # 📊 Dynamic Data Table Manager
 
-A powerful, feature-rich data table manager built with **Next.js**, **Redux Toolkit**, and **Material UI**.
-
----
+<p align="center">
+  <a href="https://dynamic-data-table-seven.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/🚀%20Live%20Demo-Dynamic%20Data%20Table-blue?style=for-the-badge&logo=vercel" alt="Live Demo"/>
+  </a>
+</p>
 
 ## 🎯 Overview
 
@@ -22,7 +24,7 @@ Display data in a clean, sortable table with pagination controls.
 - Client-side pagination (10 rows per page)
 - Redux manages sorting and pagination state
 
-*[Add screenshot: Main table view with data]*
+![Main table view with data](./public/data_table.png)
 
 ---
 
@@ -35,7 +37,7 @@ Search across all fields in real-time.
 - Case-insensitive matching
 - Searches across Name, Email, Age, Role, Department, Location
 
-*[Add screenshot: Search bar with filtered results]*
+![Search bar with filtered results](./public/global_search.png)
 
 ---
 
@@ -49,7 +51,7 @@ Add new columns or show/hide existing ones dynamically.
 - Changes reflect instantly in the table
 - State persisted via Redux Persist in localStorage
 
-*[Add screenshot: Manage Columns modal open]*
+![Manage Columns modal open](./public/manage_columns.png)
 
 ---
 
@@ -68,7 +70,7 @@ Upload CSV files with validation and error handling.
 - Use the provided `public/sample-data.csv` file
 - Or create your own with columns: Name, Email, Age, Role, Department, Location
 
-*[Add screenshot: Import dialog and success/error messages]*
+![Import dialog and success/error messages](./public/import_csv.png)
 
 ---
 
@@ -82,11 +84,11 @@ Download the current table view as a CSV file.
 - Respects current filters and sorting
 - Generates proper CSV format with headers
 
-*[Add screenshot: Export button and downloaded file]*
+![Export button and downloaded file](./public/export_csv.png)
 
 ---
 
-### 6️⃣ **Inline Row Editing** ⭐ Bonus
+### 6️⃣ **Inline Row Editing** 
 
 Double-click any cell to edit it inline with validation.
 
@@ -97,11 +99,11 @@ Double-click any cell to edit it inline with validation.
 - Input validation (email format, age is numeric)
 - Visual feedback with blue outline
 
-*[Add screenshot: Cell in edit mode]*
+![Cell in edit mode](./public/edit_row.png)
 
 ---
 
-### 7️⃣ **Add New Rows** ⭐ Bonus
+### 7️⃣ **Add New Rows** 
 
 Create new rows on the fly.
 
@@ -111,11 +113,11 @@ Create new rows on the fly.
 - Auto-generates unique ID for each row
 - Redux action dispatches new row to state
 
-*[Add screenshot: New empty row added]*
+![New empty row added](./public/add_row.png)
 
 ---
 
-### 8️⃣ **Delete Rows** ⭐ Bonus
+### 8️⃣ **Delete Rows** 
 
 Remove rows with confirmation dialog.
 
@@ -124,11 +126,11 @@ Remove rows with confirmation dialog.
 - Confirmation dialog prevents accidental deletion
 - Redux action removes row from state
 
-*[Add screenshot: Delete confirmation dialog]*
+![Delete confirmation dialog](./public/del_row.png)
 
 ---
 
-### 9️⃣ **Theme Toggle (Light/Dark Mode)** ⭐ Bonus
+### 9️⃣ **Theme Toggle (Light/Dark Mode)** 
 
 Switch between light and dark themes.
 
@@ -138,7 +140,7 @@ Switch between light and dark themes.
 - Theme preference persisted in localStorage
 - Smooth transition between themes
 
-*[Add screenshot: Dark mode view]*
+![Dark mode view](./public/theme_toggle.png)
 
 ---
 
@@ -157,6 +159,11 @@ Switch between light and dark themes.
 ---
 
 ## 🚀 Quick Start
+
+### Install Dependencies
+```bash
+git clone https://github.com/Pratham2703005/Dynamic-Data-Table.git
+```
 
 ### Install Dependencies
 ```bash
@@ -229,164 +236,9 @@ src/
 
 ---
 
-## 🎯 Assignment Checklist
-
-### Core Features
-- ✅ Table with Name, Email, Age, Role columns
-- ✅ Column header sorting (ASC/DESC)
-- ✅ Global search across all fields
-- ✅ Pagination (10 rows/page)
-- ✅ Manage Columns modal (add/show/hide)
-- ✅ Column visibility persisted
-- ✅ Import CSV with validation
-- ✅ Export CSV (visible columns only)
-
-### Bonus Features
-- ✅ Inline row editing with validation
-- ✅ Add new rows
-- ✅ Delete rows with confirmation
-- ✅ Light/Dark theme toggle
-- ✅ Fully responsive design
-- ⬜ Column drag-and-drop reordering (not implemented)
-
----
 
 ## 📦 Sample Data
 
 Test the app with: **`public/sample-data.csv`**
 - 19 rows of sample data
 - Includes: Name, Email, Age, Role, Department, Location
-
----
-
-## 📄 License
-
-MIT
-
----
-
-**Built with ❤️ for Surefy Tech Pvt Ltd**
-
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 15 (App Router)
-- **State Management**: Redux Toolkit with Redux Persist
-- **UI Library**: Material-UI (MUI) v7
-- **Language**: TypeScript
-- **CSV Parsing**: PapaParse
-- **File Export**: FileSaver.js
-- **Drag & Drop**: @hello-pangea/dnd
-
-## 📦 Installation & Running
-
-```bash
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## 🚀 Usage Guide
-
-### Basic Operations
-
-1. **Search**: Use the search bar to filter across all visible columns
-2. **Sort**: Click any column header to sort (click again to reverse)
-3. **Paginate**: Use pagination controls at the bottom
-4. **Edit**: Double-click a row or click the edit icon
-5. **Delete**: Click delete icon twice to confirm deletion
-
-### Column Management
-
-1. Click "Manage Columns" button
-2. **Add Column**: Enter ID and Label, click + icon
-3. **Show/Hide**: Check/uncheck columns
-4. **Reorder**: Drag columns using the handle icon
-
-### Import/Export
-
-**Import CSV:**
-1. Click "Import CSV"
-2. Select a CSV file (name, email, age, role required)
-3. Review any errors
-4. Data automatically loads on success
-5. **Sample CSV**: A test file is available at `public/sample-data.csv`
-
-**Export CSV:**
-1. Click "Export CSV"
-2. File downloads with visible columns only
-
-### Adding New Rows
-
-1. Click "Add New Row" button
-2. A blank row appears at the bottom
-3. Double-click or click edit to fill in the data
-4. Save your changes
-
-## 📂 Project Structure
-
-```
-src/
-├── app/
-│   ├── layout.tsx           # Root layout
-│   ├── page.tsx             # Main page
-│   ├── providers.tsx        # Redux, Theme providers
-│   └── theme.ts             # MUI themes
-├── components/
-│   ├── DataTable.tsx        # Main table
-│   ├── ManageColumnsModal.tsx # Column management
-│   ├── ImportExport.tsx     # CSV operations
-│   ├── TableManager.tsx     # Main container
-│   └── ThemeToggle.tsx      # Theme switcher
-├── features/tables/
-│   └── tableSlice.ts        # Redux slice
-├── store/
-│   ├── store.ts             # Redux store
-│   └── hooks.ts             # Typed hooks
-└── utils/
-    └── csvUtils.ts          # CSV utilities
-```
-
-## 📝 CSV Format
-
-Required columns:
-- `name` (string)
-- `email` (valid email)
-- `age` (number, 0-150)
-- `role` (string)
-
-Example:
-```csv
-name,email,age,role
-John Doe,john@example.com,28,Developer
-Jane Smith,jane@example.com,32,Designer
-```
-
-## 🎯 Key Features Implemented
-
-✅ Sorting (ASC/DESC toggle)  
-✅ Global search  
-✅ Client-side pagination  
-✅ Dynamic column add/remove  
-✅ Show/hide columns  
-✅ CSV Import with validation  
-✅ CSV Export (visible columns only)  
-✅ Inline row editing  
-✅ Row delete with confirmation  
-✅ Theme toggle (Light/Dark)  
-✅ Drag-and-drop column reordering  
-✅ Redux Persist for state  
-✅ Responsive design  
-✅ TypeScript throughout  
-✅ Material-UI components
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-#   D y n a m i c - D a t a - T a b l e  
- 
